@@ -76,7 +76,10 @@ public class Main {
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/main
             }
         }
     }

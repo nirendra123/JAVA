@@ -17,6 +17,7 @@ public class Main {
 //            System.out.println(element);
 //
 //        }
+<<<<<<< HEAD
 //        Scanner Input=new Scanner(System.in);
 //        int[] x=new int[10];
 //        for (int i=0;i<10;i++){
@@ -25,6 +26,15 @@ public class Main {
 
 
     //        for (int element:x
+=======
+        Scanner Input=new Scanner(System.in);
+        int[] x=new int[10];
+//        for (int i=0;i<10;i++){
+//            System.out.println("Enter the element X["+(i+1)+"]: ");
+//            x[i]= Input.nextInt();
+        }
+//        for (int element:x
+>>>>>>> origin/main
 //             ) {
 //            System.out.println(element);
 //
@@ -32,6 +42,7 @@ public class Main {
 //        for(int i=0;i<10;i++){
 //            System.out.println(x[i]);
 //        }
+<<<<<<< HEAD
     //two dimesional array
     int[] x = {1, 2, 3};
     int[][] y = {{10, 20, 30}, {40, 50, 60},{20,30,40}};
@@ -49,4 +60,10 @@ public class Main {
         System.out.println("\n"+y[0].length);
 
 }
+=======
+
+    
+
+    }
+>>>>>>> origin/main
 }
