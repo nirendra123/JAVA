@@ -2,6 +2,7 @@ import java.io.*;
 
 public class ImportantFile {
     synchronized public void fun() throws IOException {
+        GUI gui=new GUI();
         File file = new File("Nirendra.txt");
 
         //this will create new file
@@ -20,8 +21,11 @@ public class ImportantFile {
         while ((value = fileReader.read()) != -1) {
 
             System.out.print((char) value);
+
             try{
+
                 Thread.sleep(200);
+
             }catch (Exception e){
                 e.printStackTrace();
             }
