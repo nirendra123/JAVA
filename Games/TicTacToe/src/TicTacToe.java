@@ -11,6 +11,7 @@ public class TicTacToe implements ActionListener {
     Random random = new Random();
     JFrame jFrame = new JFrame();
     JButton jButton = new JButton();
+    JButton replay_button=new JButton();
     JPanel title_Panel = new JPanel();
     JPanel button_panel = new JPanel();
     JLabel jLabel = new JLabel();
@@ -186,6 +187,7 @@ public class TicTacToe implements ActionListener {
             jLabel.setText("X win");
         }
 
+
     }
 
     public void oWins(int a, int b, int c) {
@@ -197,12 +199,10 @@ public class TicTacToe implements ActionListener {
             jLabel.setText("O win");
         }
 
-    }
-
-    public void move(int i) {
-
 
     }
+
+
 
 
     @Override
@@ -217,6 +217,7 @@ public class TicTacToe implements ActionListener {
                         player1_turn = false;
                         jLabel.setText("O turn");
                         check();
+
                     }
                 } else {
                     if (buttons[i].getText() == "") {
@@ -226,12 +227,19 @@ public class TicTacToe implements ActionListener {
                         jLabel.setText("X turn");
                         check();
 
+
                     }
                 }
             }
 
 
         }
+    }
+    public void replay() throws InterruptedException {
+        Thread.sleep(2000);
+        new TicTacToe();
+
+
     }
 }
 
