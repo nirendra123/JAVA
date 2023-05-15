@@ -2,9 +2,38 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 
 public class ImageOperation implements ActionListener {
     public static void operate(int key){
+
+      JFileChooser jFileChooser=new JFileChooser();
+      jFileChooser.showOpenDialog(null);
+      File file=jFileChooser.getSelectedFile();
+      //read file
+        //use file input stream
+        try{
+            FileInputStream fileInputStream=new FileInputStream(file);
+            byte []data=new byte[fileInputStream.available()];
+           fileInputStream.read(data);
+           int i=0;
+            for (byte b:data
+                 ) {
+                System.out.println(b);
+                data[i]=(byte)(b^key);
+                i++;
+                
+            }
+            FileOutputStream fileOutputStream=new FileOutputStream(file);
+            fileOutputStream.write(data);
+            fileOutputStream.close();
+            fileInputStream.close();
+            JOptionPane.showMessageDialog(null,"Done");
+        }catch(Exception e){
+            e.printStackTrace();
+        }
 
     }
     public static void  main(String[] args) {
@@ -21,6 +50,7 @@ public class ImageOperation implements ActionListener {
         JTextField jTextField=new JTextField();
         jTextField.setBounds(140,30,300,30);
         jTextField.setFont(new Font("Roboto",Font.BOLD,15));
+
         button1.addActionListener(e -> {
             System.out.println("Button clicked");
             String text= jTextField.getText();
