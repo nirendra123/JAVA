@@ -12,6 +12,7 @@ public class Server extends JFrame implements ActionListener {
     JPanel jPanel1;
     JTextField textField;
     JPanel a1;
+    Box vertical=Box.createVerticalBox();
      public Server(){
 
          jPanel1=new JPanel();
@@ -112,6 +113,20 @@ public class Server extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
          String output=textField.getText();
+         Label out=new Label(output);
+         JPanel p2=new JPanel();
+         p2.add(out);
+         a1.setLayout(new BorderLayout());
+         JPanel right=new JPanel(new BorderLayout());
+         right.add(p2,BorderLayout.LINE_END);
+         vertical.add(right);
+         vertical.add(Box.createVerticalStrut(15));
+
+         a1.add(vertical,BorderLayout.PAGE_START);
+         repaint();
+         invalidate();
+         validate();
+
 
 
     }
