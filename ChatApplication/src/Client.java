@@ -12,7 +12,7 @@ public class Client {
 
         {
             try {
-                Socket socket = new Socket("172.25.20.196", 12345);
+                Socket socket = new Socket("localhost", 12345);
 
                 BufferedReader socketDataReader= new BufferedReader(new InputStreamReader(socket.getInputStream()));
                 //this is for user typed input

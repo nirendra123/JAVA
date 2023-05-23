@@ -11,6 +11,7 @@ public class Server{
         try {
             ServerSocket serverSocket =new ServerSocket(12345);
             serverSocket.accept();
+
             System.out.println("A new client has connected");
         } catch (IOException e) {
 

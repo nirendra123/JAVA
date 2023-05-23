@@ -24,7 +24,7 @@ public class MyFrame extends JFrame implements ActionListener {
 
 
         ButtonGroup group=new ButtonGroup();
-        
+
         group.add(hamburgerButton);
         group.add(hotdogButton);
 
